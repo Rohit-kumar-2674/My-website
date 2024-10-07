@@ -6,51 +6,129 @@
     <title>Rohit Kumar - Resume</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
             color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
-        .profile {
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 40px 0;
             text-align: center;
         }
+
         .profile img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
-        .section {
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 10px 0 5px 0;
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
             margin-bottom: 20px;
+            color: #0056b3;
         }
-        .contact-info, .education, .skills, .languages, .contact-me {
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
+
+        .contact-info, .education, .skills, .languages, .personal-info, .contact-me {
+            margin-bottom: 30px;
         }
+
+        .contact-info p, .personal-info p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .contact-info p a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .contact-info p a:hover {
+            text-decoration: underline;
+        }
+
         ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
         }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input, textarea {
-            margin-bottom: 10px;
+
+        ul li {
             padding: 10px;
-            font-size: 1em;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .skills ul li, .languages ul li {
+            background-color: #e9f0fa;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
         }
+
+        form input:focus, form textarea:focus {
+            border-color: #0056b3;
+            outline: none;
+        }
+
         button {
-            padding: 10px;
-            background-color: #28a745;
+            padding: 12px;
+            background-color: #0056b3;
             color: white;
             border: none;
             border-radius: 5px;
+            font-size: 1rem;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #003f88;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            form input, form textarea {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -61,14 +139,14 @@
         <h1>Rohit Kumar</h1>
     </header>
 
-    <section class="section contact-info">
+    <section class="contact-info">
         <h2>Contact Information</h2>
         <p>Village: Majherna (Paprola), Tehsil Baijnath, District Kangra, H.P. 176063</p>
-        <p>Phone: 8580765006</p>
+        <p>Phone: <a href="tel:+918580765006">8580765006</a></p>
         <p>Email: <a href="mailto:rocky26i10@gmail.com">rocky26i10@gmail.com</a></p>
     </section>
 
-    <section class="section education">
+    <section class="education">
         <h2>Education</h2>
         <ul>
             <li><strong>B.Com in Bachelor of Commerce</strong> (July 2024)<br>Pandit Sant Ram Govt. Degree College, Baijnath, Himachal Pradesh</li>
@@ -77,12 +155,7 @@
         </ul>
     </section>
 
-    <section class="section">
-        <h2>Objective</h2>
-        <p>To succeed in an environment of growth and excellence and earn a job that provides satisfaction, self-development, and helps achieve both personal and organizational goals.</p>
-    </section>
-
-    <section class="section skills">
+    <section class="skills">
         <h2>Skills</h2>
         <ul>
             <li>Hardworking & Enthusiastic</li>
@@ -93,7 +166,7 @@
         </ul>
     </section>
 
-    <section class="section languages">
+    <section class="languages">
         <h2>Languages</h2>
         <ul>
             <li>English</li>
@@ -101,7 +174,7 @@
         </ul>
     </section>
 
-    <section class="section personal-info">
+    <section class="personal-info">
         <h2>Personal Information</h2>
         <p><strong>Father's Name:</strong> Surender Kumar</p>
         <p><strong>Mother's Name:</strong> Sunita</p>
@@ -111,7 +184,7 @@
         <p><strong>Marital Status:</strong> Single</p>
     </section>
 
-    <section class="section contact-me">
+    <section class="contact-me">
         <h2>Contact Me</h2>
         <form action="https://formspree.io/f/mkgnwozy" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
